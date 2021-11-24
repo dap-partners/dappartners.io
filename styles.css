@@ -1,0 +1,152 @@
+/* General */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    --primary-color: #d5ff85;
+    --secondary-color: #172335;
+
+    --header-footer---v-padding: 1rem;
+    --header-footer---h-padding: 1.5rem;
+}
+
+body,
+a {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+}
+
+body {
+    min-height: 100vh;
+}
+
+.image-container {
+    height: fit-content;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+}
+
+hr {
+    width: 80%;
+    height: 0;
+    border: 0;
+    border-top: 2px solid var(--primary-color);
+}
+
+.future-font {
+    font-family: pirulen, sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+/* Specific */
+
+/* Header */
+
+header {
+    --v-padding: var(--header-footer---v-padding);
+    --h-padding: var(--header-footer---h-padding);
+    --logo-line-spacing: 3rem;
+    --logo-width: clamp(3rem, 7vw, 6rem);
+    --logo-height: var(--logo-width);
+
+    padding: var(--v-padding) var(--h-padding);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.header__column {
+    display: flex;
+    flex-direction: column;
+}
+
+.header__row {
+    margin-bottom: var(--logo-line-spacing);
+
+    display: flex;
+    flex-direction: row;
+}
+
+.logo-container--small {
+    width: var(--logo-width);
+    margin-right: var(--logo-line-spacing);
+}
+
+.header__line--horizontal {
+    width: calc(100vw - var(--logo-width) - var(--logo-line-spacing) - var(--h-padding) * 2 - 5rem);
+    border-color: var(--primary-color);
+    border-top: 3px solid var(--primary-color);
+}
+
+.header__line--vertical {
+    height: calc(100vh - var(--logo-height) - var(--logo-line-spacing) - var(--v-padding) * 2 - 5rem);
+    border-color: var(--primary-color);
+    border-left: 3px solid var(--primary-color);
+}
+
+/* Main */
+
+main {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero {
+    width: 60%;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-container--full {
+    width: 100%;
+    max-width: 50rem;
+    margin-bottom: 1rem;
+}
+
+@media (orientation: landscape) {
+    .logo-container--full {
+        width: 100%;
+        height: fit-content;
+    }
+}
+
+.tagline {
+    font-size: min(2.5vw, 2.25rem);
+
+    width: 100%;
+    text-align: center;
+}
+
+/* Footer */
+
+footer {
+    --v-padding: var(--header-footer---v-padding);
+    --h-padding: var(--header-footer---h-padding);
+    padding: var(--v-padding) var(--h-padding);
+
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+.footer__contact {
+    font-size: 0.75rem;
+}
